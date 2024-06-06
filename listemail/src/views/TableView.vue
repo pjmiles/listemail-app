@@ -27,7 +27,7 @@
                         testemail@gridiron.com
                     </td>
                     <td class="px-6 py-4">
-                        <button class="px-3.5 py-1 text-white bg-gray-600 rounded-md dark:hover:bg-blue-500">add</button>
+                        <button class="px-3.5 py-1 text-white bg-gray-600 rounded-md dark:hover:bg-blue-500">save</button>
                     </td>
                 </tr>
             </tbody>
