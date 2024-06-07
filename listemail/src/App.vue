@@ -5,7 +5,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <!-- <h1>EX001</h1> -->
+    <nav>
+      
+    </nav>
   </header>
   <RouterView />
 </template>
