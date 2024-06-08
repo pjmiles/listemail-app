@@ -1,18 +1,17 @@
-import express from "express"
-import cors from "cors"
+import express from "express";
+import cors from "cors";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
-import createDatabaseTables from "../src/model/createTables.js"
+import createDatabaseTables from "./model/createTables.js";
+import { router } from "./routes/router.js";
 
-const app = express()
-app.use(cors())
+const app = express();
+app.use(cors());
 app.use(bodyParser.json());
-app.use(cookieParser())
-
-
+app.use(cookieParser());
+app.use("/", router);
 
 app.listen(process.env.PORT || 5000, () => {
-    createDatabaseTables()
-    console.log(`listening on port ${process.env.PORT || 5000}`);
+  createDatabaseTables();
+  console.log(`listening on port ${process.env.PORT || 5000}`);
 });
-
