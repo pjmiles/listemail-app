@@ -1,4 +1,4 @@
-import connection from '../dbConfig';
+import connection from "../dbConfig.js";
 
 const createAdminPaygizmoLoginsTable = `
   CREATE TABLE IF NOT EXISTS paygizmologins (
@@ -61,7 +61,7 @@ const createPaygizmosesTable = `
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 `;
 
-const createDatabaseTables = () => {
+const createTables = () => {
         connection.query(
             createAdminPaygizmoLoginsTable, 
             (err, results, fields) => {
@@ -71,7 +71,9 @@ const createDatabaseTables = () => {
                     console.log('paygizmologins table checked/created successfully');
                 }
         });
-        connection.query(createPaygizmosesTable, (err, results, fields) => {
+        connection.query(
+          createPaygizmosesTable, 
+          (err, results, fields) => {
                 if(err){
                     console.error('Error creating paygizmoseshtml table:', err.message);
                 } else {
@@ -80,4 +82,4 @@ const createDatabaseTables = () => {
         });
 };
 
-export default createDatabaseTables;
+export default createTables;
