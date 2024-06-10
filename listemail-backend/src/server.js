@@ -6,9 +6,15 @@ import createDatabaseTables from "./model/createTables.js";
 import { router } from "./routes/router.js";
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json());
 app.use(cookieParser());
+const corsOptions = {
+  origin: "http://localhost:5173/",
+  methods: "GET, POST",
+  allowedHeaders: "Content-Type, Authorization",
+};
+
+app.use(cors(corsOptions));
 app.use("/", router);
 
 app.listen(process.env.PORT || 5000, () => {

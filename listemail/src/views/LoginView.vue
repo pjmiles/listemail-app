@@ -20,7 +20,7 @@
 
   
 <script>
-
+import axios from 'axios';
 import axiosInstace from '../axios/axiosInstance';
 export default {
     data() {
@@ -33,7 +33,7 @@ export default {
     methods: {
         async login() {
             try {
-                const response = await axios.post('/login', {
+                const response = await axios.post('http://localhost:5173/login', {
                     email: this.email,
                     password: this.password
                 });

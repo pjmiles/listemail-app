@@ -13,7 +13,8 @@ const router = createRouter({
     {
       path: '/:id',
       name: 'table',
-      component: TableView
+      component: TableView,
+      meta: {requireAuth: true}
     },
   ]
 })

@@ -62,24 +62,20 @@ const createPaygizmosesTable = `
 `;
 
 const createTables = () => {
-        connection.query(
-            createAdminPaygizmoLoginsTable, 
-            (err, results, fields) => {
-                if(err){
-                    console.error('Error creating paygizmologins table:', err.message);
-                }else{
-                    console.log('paygizmologins table checked/created successfully');
-                }
-        });
-        connection.query(
-          createPaygizmosesTable, 
-          (err, results, fields) => {
-                if(err){
-                    console.error('Error creating paygizmoseshtml table:', err.message);
-                } else {
-                    console.log('paygizmoseshtml table checked/created successfully');
-                }
-        });
+  connection.query(createAdminPaygizmoLoginsTable, (err, results, fields) => {
+    if (err) {
+      console.error("Error creating paygizmologins table:", err.message);
+    } else {
+      console.log("paygizmologins table checked/created successfully");
+    }
+  });
+  connection.query(createPaygizmosesTable, (err, results, fields) => {
+    if (err) {
+      console.error("Error creating paygizmoseshtml table:", err.message);
+    } else {
+      console.log("paygizmoseshtml table checked/created successfully");
+    }
+  });
 };
 
 export default createTables;
