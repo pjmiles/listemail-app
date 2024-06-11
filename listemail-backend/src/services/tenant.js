@@ -59,7 +59,7 @@ export const createAdminUser = async (req, res) => {
 
     if (!adminExists) {
       const hashedPassword = await argon2.hash(password);
-      const sqlInsert = `INSERT INTO paygizmologins (EMAIL, PASSWORD, TENANT) VALUES (?, ?, ?)`;
+      const sqlInsert = `INSERT INTO paygizmologins (EMAILADDRESS, PASSWORD, TENANT) VALUES (?, ?, ?)`;
       await connection
         .promise()
         .query(sqlInsert, [email, hashedPassword, tenant]);
