@@ -1,5 +1,0 @@
-<template>
-    <button class="bg-blue-500 hover:bg-blue-600 text-white rounded py-1.5 px-4">
-        <slot></slot>
-    </button>
-</template>
