@@ -9,9 +9,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cookieParser());
 const corsOptions = {
-  origin: "http://localhost:5173/",
-  methods: "GET, POST",
+  origin: "http://localhost:5173",
   allowedHeaders: "Content-Type, Authorization",
+  credentials: true,
+  optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
