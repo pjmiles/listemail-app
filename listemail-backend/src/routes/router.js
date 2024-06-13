@@ -8,6 +8,6 @@ export const router = express.Router();
 
 router.get("/", verifyToken, listAdmin);
 router.post("/", createAdminUser);
-router.post("/", verifyToken, createEmail);
-router.post("/login", verifyToken, login);
-router.post("/bulk", verifyToken, createBukEmail);
+router.post("/emails", verifyToken, createEmail);
+router.post("/login", login);
+router.post("/emails/bulk", verifyToken, createBukEmail);
