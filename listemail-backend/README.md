@@ -3,5 +3,6 @@
 Backend setup for Email List Application
 
 ## Getting started
-- [Node.js](www.node.js)
-- [MySql]()
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/)
+- [MySql](https://dev.mysql.com/downloads/)

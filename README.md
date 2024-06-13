@@ -41,3 +41,10 @@ Both frontend and backend has an `.env.example` file that contains the environme
 1. Clone the repository:
 3. cd frontend & `npm i` & `npm run dev`.
 3. cd backend & `npm i` & `nodemon src/server.js`.
+
+#### Created Default Credentials
+You can login with any of the following credentials 
+* `email`: abi@gridirontest.com,  `password`: password1,
+* `email`: ruth@gridirontest.com,  `password`: password2,
+* `email`: niran@gridirontest.com,  `password`: password3,
+* `email`: victor@gridirontest.com,  `password`: password4
