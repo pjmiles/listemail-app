@@ -1,10 +1,10 @@
 <template>
   <div class="relative overflow-x-auto">
-    <div class="mb-4">
+    <div class="w-2/5 m-auto my-4">
       <input v-model="searchQuery" type="text" placeholder="Search emails"
         class="px-4 py-2 w-full text-sm text-gray-700 bg-white border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
     </div>
-    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+    <table class="m-auto w-3/5 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
         <tr>
           <th scope="col" class="px-6 py-3">
@@ -29,7 +29,7 @@
           <td class="px-6 py-4">
             <button @click="() => showModal(emailObj.EMAILADDRESS)"
               class="px-3.5 py-1 text-white bg-gray-600 rounded-md dark:hover:bg-blue-500">
-              add
+              submit
             </button>
           </td>
         </tr>
