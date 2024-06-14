@@ -1,6 +1,6 @@
 
 <template>
-  <div class="flex items-center justify-center h-screen">
+  <div class="flex items-center justify-center my-[100px]">
     <form @submit.prevent="login" class="w-2/5 mx-auto bg-gray-800 p-6 rounded-lg">
       <div class="h-10">
         <p v-if="error" class="text-red-500 mt-2 text-center">{{ error }}</p>
